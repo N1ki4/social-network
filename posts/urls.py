@@ -13,5 +13,5 @@ urlpatterns = [
     path("user/create/", CreateUser.as_view(), name="signup"),
     path("user/token/", views.obtain_auth_token, name="login"),
     # Likes endpoint
-    path('posts/<int:pk>/like/', LikePost.as_view(), name='like_post'),
+    path('posts/like/<int:pk>/', LikePost.as_view(), name='like_toggle'),
 ]
